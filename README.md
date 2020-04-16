@@ -1,0 +1,2 @@
+# Redshift-cluster
+AWS Redshift
