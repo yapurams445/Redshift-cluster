@@ -18,13 +18,15 @@ module "redshift" {
 
   source = "./modules/redshift/"
 
+  vpc_region            = var.vpc_region
   rs_cluster_identifier = var.rs_cluster_identifier
-  rs_database_name = var.rs_cluster_type
-  rs_master_username = var.rs_master_username
-  rs_master_pass = var.rs_master_pass
-  rs_nodetype = var.rs_nodetype
-  rs_cluster_type = var.rs_cluster_type
-  vpc_name = var.vpc_name
-  availability_zone = var.availability_zone
+  rs_database_name      = var.rs_database_name
+  rs_master_username    = var.rs_master_username
+  rs_master_pass        = var.rs_master_pass
+  rs_nodetype           = var.rs_nodetype
+  rs_cluster_type       = var.rs_cluster_type
+  vpc_name              = var.vpc_name
+  availability_zone     = var.availability_zone
+  subnet_group_subnet_ids = var.subnet_group_subnet_ids
   #vpc_region = var.vpc_region
 }

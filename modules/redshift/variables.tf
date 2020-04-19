@@ -7,6 +7,8 @@ variable "rs_cluster_type" {}
 variable "vpc_name" {}
 variable "availability_zone" {}
 variable "vpc_region" {}
-
+variable "subnet_group_subnet_ids" {
+    type = list(string)
+}
 #variable "required_nodes" {}
 #variable "subnet_group" {}

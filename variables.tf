@@ -13,7 +13,7 @@ variable "vpc_name" {
   description = "VPC for building demos"
 }
 
-variable "vpc_region" { 
+variable "vpc_region" {
   description = "AWS region"
 }
 
@@ -27,10 +27,15 @@ variable "vpc_public_subnet_cidr" {
   #default = ["10.20.1.0/24", "10.20.2.0/24"]
 }
 
+
 #Private Subnets
 variable "vpc_private_subnet_cidr" {
   type = list(string)
   #default = ["10.20.1.0/24", "10.20.2.0/24"]
+}
+
+variable "subnet_group_subnet_ids" {
+    type = list(string)
 }
 
 ##########################################

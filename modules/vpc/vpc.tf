@@ -1,6 +1,3 @@
-// provider "aws" {
-//   region = var.vpc_region
-// }
 
 # Define a vpc
 resource "aws_vpc" "datascience_gb_vpc" {

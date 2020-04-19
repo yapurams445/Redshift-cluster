@@ -1,6 +1,3 @@
-provider "aws" {
-  region = var.vpc_region
-}
 
 data "aws_vpc" "selected" {
   tags = {
@@ -46,10 +43,11 @@ resource "aws_default_security_group" "redshift_security_group" {
 
 resource "aws_redshift_subnet_group" "redshift-subnet-group" {
   name = "redshift-subnet-group"
-  count = length(data.aws_subnet_ids.public.ids)
+  // count = length(data.aws_subnet_ids.public.ids)
   #subnet_ids = ["subnet-00fb46b5bec0d47e3", "subnet-07b084ec2b46a23bb", "subnet-044fc97154e45a6eb"]
   #subnet_ids = ["${split(",", data.aws_subnet_ids.public.id)}"]
-  subnet_ids = tolist(data.aws_subnet_ids.public.ids)[count.index]
+  subnet_ids = var.subnet_group_subnet_ids
+  // subnet_ids = tolist(data.aws_subnet_ids.public.ids)[count.index]
   #subnet_ids = "${element(data.aws_subnet_ids.public, 0)}"
   #subnet_ids = ["${data.aws_subnet_ids.public.[0].id}"]
   #subnet_ids = 

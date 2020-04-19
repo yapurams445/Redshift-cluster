@@ -1,13 +1,13 @@
-rs_cluster_identifier= "datascience-gb-rs"
-rs_database_name= "datascience_gb_rs"
-rs_master_username= "datascience_gb"
-rs_master_pass= ""
-rs_nodetype= "dc2.large"
-rs_cluster_type= "single-node"
-vpc_name= "datascience-gb-vpc"
-availability_zone= "eu-west-2a"
-vpc_region = "eu-west-2"
-
+rs_cluster_identifier = "dev"
+rs_database_name      = "dev"
+rs_master_username    = "dev"
+rs_master_pass        = "PassW0rd"
+rs_nodetype           = "dc2.large"
+rs_cluster_type       = "single-node"
+vpc_name              = "datascience-gb-vpc"
+availability_zone     = ["eu-west-1a"]
+vpc_region            = "eu-west-1"
+subnet_group_subnet_ids =["subnet-057524c23a8764edd", "subnet-0fbd13f1b33523f74", "subnet-01f360f5fb4131a2b"]
 #availability_zone= ["eu-west-2a","eu-west-2b","eu-west-2c"]
 #required_nodes=""
 #subnet_group=""
